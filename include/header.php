@@ -1,4 +1,4 @@
-
+<?php include_once($_SERVER["DOCUMENT_ROOT"]."/jongro/include/common.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -1,7 +1,7 @@
 <?php include_once '../include/header.php';?>
-    <script src="js/locker.js"></script>
+    <script src="js/locker_info.js"></script>
     <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"> -->
-    <link rel="stylesheet" href="../css/locker.css">
+    <link rel="stylesheet" href="../css/locker_a_mo.css">
 </head>
 <body>
     <div class="wrap">
@@ -31,29 +31,13 @@
                     <i class="fa-solid fa-chevron-down"></i>
                 </div>
                 <div class="select_menu">
-                    <span>전체 구역</span>
+                    <span>A 구역</span>
                     <i class="fa-solid fa-chevron-down"></i>
                     <ul>
-                        <?php
-                            $sql_query = "SELECT CenterCD, site, area, areaNm, areaYN FROM areainfo WHERE CenterCD='C002'";
-                            $result = mysqli_query($db_conn, $sql_query);
-                            if ($result == false) {
-                                // echo('실패: '.mysqli_error($db_conn));
-                                exit();
-
-                            } else {
-                                // echo('성공');
-                                // echo "조회된 행의 수 : ".mysqli_num_rows($result);
-                                while ($row = mysqli_fetch_assoc($result)) {
-                                    $areaNm = $row['areaNm'];
-                                    $area = $row['area'];
-                        ?>
-                            <li onclick="location.href='../locker_info/locker_info.php'; $Global_curr_area=$area"><?=$areaNm?></li>
-                        <?php
-                                }
-                                mysqli_free_result($result);
-                            }
-                        ?>
+                        <li onclick="location.href='../locker/locker.php'">전체 구역</li>
+                        <li onclick="location.href='../locker_b/locker_b_mo.php'">B 구역</li>
+                        <li onclick="location.href='../locker_c/locker_c_mo.php'">C 구역</li>
+                        <li onclick="location.href='../locker_d/locker_d_mo.php'">D 구역</li>
                     </ul>
                 </div>
             </div>
@@ -75,69 +59,105 @@
                 </div>
             </div>
             <div class="main_img">
-                <div class="locker_wrap">
-                    <ul class="locker_a">
+                <div class="locker_left locker_wrap">
+                    <ul>
                         <li></li>
                         <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li class="locker_text">
-                            <span>A</span>
-                        </li>
-                        <li></li>
-                        <li style="background-color: #dcdcdc;"></li>
-                        <li></li>
-                        <li></li>
-                        <li style="border-bottom: 1px solid black;"></li>
-                        <li></li>
-                    </ul>
-                    <ul class="locker_b">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li class="locker_text">
-                            <span>B</span>
-                        </li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <ul class="locker_bottom">
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                    </ul>
-                    <ul class="locker_c">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li class="locker_text">
-                            <span>C</span>
-                        </li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                    <ul class="locker_d">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li class="locker_text">
-                            <span>D</span>
-                        </li>
                         <li></li>
                         <li></li>
                         <li></li>
                         <li></li>
                     </ul>
                 </div>
+                <div class="locker_right locker_wrap">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <ul class="locker_middle">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <ul class="locker_middle_img">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <ul class="locker_middle">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <ul>
+                        <li></li>
+                        <li style="background-color: #dcdcdc;" class="select_locker"></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="preview">
+                <i class="fa-solid fa-arrow-left"></i>
+                <img src="../img/locker_info.png" alt="축소화면">
+                <i class="fa-solid fa-arrow-right locker_on"></i>
+                <div></div>
             </div>
             <div class="main_btn">
                 <span>선택</span>
@@ -173,5 +193,5 @@
                 </div>
             </div>
         </div>
-        
-<?php include_once '../include/footer.php';?>
+
+        <?php include_once '../include/footer.php';?>
