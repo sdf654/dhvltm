@@ -1,0 +1,221 @@
+@import 'header', 'footer';
+
+.content_top {
+
+    .select_wrap {
+        position: absolute;
+        top: 7rem;
+        right: 3.2rem;
+        
+        >div {
+            width: 10rem;
+            padding: 0.5rem;
+            display: inline-block;
+            border-bottom: 2px solid #6a6a6a;
+            cursor: pointer;
+            margin-left: 1rem;
+            opacity: 0.5;
+
+            span {
+                color: #6a6a6a;
+                font-size: 0.9rem;
+            }
+
+
+            i {
+                float: right;
+                color: #6a6a6a;
+                font-size: 0.9rem;
+            }
+
+            ul {
+                display: none;
+            }
+
+            &.select_menu {
+                position: relative;
+
+                ul {
+                    position: absolute;
+                    top: 2.5rem;
+                    width: 100%;
+                    background-color: #fff;
+                    margin-left: -0.5rem;
+
+                    li {
+                        padding: 0.5rem;
+                        font-size: 0.9rem;
+                        display: block;
+                        border-bottom: 2px solid #ff4628;
+
+                        &:hover {
+                            background-color: #ff4628;
+                            color: #fff;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+.content {
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .main_text {
+        padding-left: 2rem;
+        align-self: flex-start;
+
+        >p {
+            margin: 1rem 0 0;
+        }
+
+        p {
+             font-size: 0.8rem;
+             color: #6a6a6a;
+             line-height: 3;
+        }
+
+        >div {
+
+            &:first-child {
+                span {
+
+                    font-size: 1.3rem;
+        
+                    &:nth-of-type(1) {
+                        color: #ff4628;
+                        font-size: 1.7rem;
+                        font-weight: bold;
+                    }
+                }
+            }
+            
+        }
+
+        >.hide_text {
+            color: #ff4628;
+        }
+
+        .hide_text {
+            font-size: 1.3rem;
+            font-weight: bold;
+            opacity: 0;
+
+            strong {
+                font-size: 1.7rem;
+            }
+        }
+
+        .color_box {
+
+            margin-top: 1rem;
+
+            span {
+                font-size: 0.7rem;
+                color: #6a6a6a;
+                margin-right: 0.5rem;
+
+                &::before {
+                    content: "";
+                    border: 1.5px solid #6a6a6a;
+                    display: inline-block;
+                    width: 0.5rem;
+                    height: 0.5rem;
+                    margin-right: 0.2rem;
+                    background-color: #dcdcdc;
+                }
+
+                &:last-child {
+                    &::before {
+                        background-color: #ff4628;
+                    }
+                }
+            }
+        }
+    }
+
+    .main_img {
+
+        .locker {
+            display: flex;
+
+            ul {
+                border-right: 1px solid black;
+
+                &:first-child {
+                    border-left: 1px solid black;
+                }
+
+                li {
+                    width: 3rem;
+                    height: 2rem;
+                    background-color: #FFFAE9;
+                    border-top: 1px solid black;
+                    border-bottom: none;
+
+                    &:last-child {
+                        border-bottom: 1px solid black;
+                       
+                    }
+                }
+
+                &.locker_middle {
+
+                    li {
+                        &:last-child {
+                            height: 6rem
+                        }
+                    }
+                }
+
+                &.locker_middle_img {
+
+                    li {
+
+                        &:nth-child(2) {
+                            height: 4rem;
+                            background-image: url(../img/locker_com.png);
+                            background-position: 50% 50%;
+                            background-size: 90%;
+                            background-repeat: no-repeat;
+                        }
+
+                        &:last-child {
+                            height: 6rem;
+                        }
+                    }
+                }
+            }
+
+            
+        }
+    }
+
+    .main_btn {
+        align-self:flex-end;
+        width: 8rem;
+        padding: 0.5rem;
+        border-bottom: 2px solid #6a6a6a;
+        opacity: 0.8;
+        cursor: pointer;
+
+        span {
+            color: #6a6a6a;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        i {
+            color: #6a6a6a;
+            float: right;
+            line-height: 1.3;
+        }
+    }
+}
+
+

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="357" height="61" viewBox="0 0 357 61">
+  <defs>
+    <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0"/>
+      <stop offset="0.422" stop-opacity="0.847"/>
+      <stop offset="1" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <ellipse id="타원_8" data-name="타원 8" cx="163.5" cy="15.5" rx="163.5" ry="15.5" transform="translate(15 15)" opacity="0.2" fill="url(#radial-gradient)"/>
+</svg>

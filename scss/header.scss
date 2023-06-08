@@ -1,0 +1,143 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #000;
+    font-size: 20px;
+    font-family: 'Pretendard-Regular';
+
+}
+
+html, body {
+    height: 100%;
+}
+
+ul, li, ol {
+    list-style: none
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrap {
+    background: linear-gradient(110deg, #fff, #f2f2f2);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.content {
+
+    .phone_wrap {
+        display: none;
+    }
+}
+
+.phone_title {
+    display: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 2rem 0;
+
+    h1 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        font-family: pretendard, sans-serif;
+        font-style: normal;
+        font-weight: 800;
+        cursor: default;
+    }
+
+    nav {
+
+        ul {
+            display: flex;
+
+            li {
+                padding-left: 1.5rem;
+                font-weight: bold;
+                
+                a {
+                    transition: all 0.3s;
+                }
+
+                &:hover a {
+                    color: #ff4628;
+                }
+            }
+        }
+    }
+}
+
+.footer_lang {
+    display: none;
+}
+
+// 모바일
+@media (max-width: 768px) {
+
+    .wrap {
+        background: #fff;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    header {
+        display: flex;
+        justify-content: space-between;
+        padding: 1.5rem 1rem 0;
+    
+        h1 {
+            font-size: 1.6rem;
+            font-weight: bold;
+            font-family: pretendard, sans-serif;
+            font-style: normal;
+            font-weight: 800;
+            cursor: default;
+        }
+    
+        nav {
+
+            &.lang {
+                display: none;
+            }
+    
+            ul {
+                display: flex;
+    
+                li {
+                    padding-left: 1.5rem;
+                    font-weight: bold;
+
+                    &:first-child {
+                        display: none;
+                    }
+                    
+                    a {
+                        transition: all 0.3s;
+                        font-size: 0.7rem;
+                    }
+    
+                    &:hover a {
+                        color: #ff4628;
+                    }
+                }
+            }
+        }
+    }
+  }
+
